@@ -1,0 +1,12 @@
+class VariableScopeExample {
+    int number = 100; 
+public void display() {
+        int number = 50;
+        System.out.println("Local Variable: " + number);
+        System.out.println("Global Variable: " + this.number); 
+    }
+   public static void main(String[] args) {
+ VariableScopeExample obj = new VariableScopeExample();
+        obj.display();
+    }
+}
