@@ -1,0 +1,9 @@
+public class SplitExample {
+    public static void main(String[] args) {
+        String text = "Java is fun";
+        String[] words = text.split(" ");
+    for (String word : words) {
+            System.out.println(word);
+        }
+    }
+}
