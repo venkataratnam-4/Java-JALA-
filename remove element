@@ -1,0 +1,25 @@
+import java.util.Arrays;
+public class RemoveElement {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50}; 
+        int target = 30; 
+int[] newArray = removeElement(numbers, target);
+        System.out.println("Array after removal: " + Arrays.toString(newArray));
+    }
+ public static int[] removeElement(int[] arr, int target) {
+        int newSize = 0;
+        for (int num : arr) {
+            if (num != target) {
+                newSize++;
+            }
+        }
+int[] newArr = new int[newSize];
+        int index = 0;
+        for (int num : arr) {
+            if (num != target) {
+                newArr[index++] = num;
+            }
+        }
+ return newArr;
+    }
+}
