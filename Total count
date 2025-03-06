@@ -1,0 +1,27 @@
+public class Counter {
+    
+    private static int totalCount = 0;
+
+   
+    private int instanceCount;
+
+    
+    public Counter() {
+        instanceCount = ++totalCount; 
+    }
+
+    
+    public void displayCounts() {
+        System.out.println("Instance Count: " + instanceCount);
+        System.out.println("Total Count (Static): " + totalCount);
+    }
+
+    
+    public static void main(String[] args) {
+        Counter obj1 = new Counter(); 
+        Counter obj2 = new Counter(); 
+
+        obj1.displayCounts();
+        obj2.displayCounts();
+    }
+}
