@@ -1,0 +1,21 @@
+public class IndexOfExample {
+    public static void main(String[] args) {
+        String str = "Hello, World! Welcome to Java.";
+
+        
+        int indexOfChar = str.indexOf('o');
+        System.out.println("The index of 'o' is: " + indexOfChar);
+
+    
+        int indexOfSubstring = str.indexOf("World");
+        System.out.println("The index of 'World' is: " + indexOfSubstring);
+
+        
+        int indexFrom = str.indexOf('o', 5); 
+        System.out.println("The index of 'o' starting from index 5 is: " + indexFrom);
+
+    
+        int indexFromSubstring = str.indexOf("Welcome", 10); 
+        System.out.println("The index of 'Welcome' starting from index 10 is: " + indexFromSubstring);
+    }
+}
