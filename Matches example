@@ -1,0 +1,23 @@
+public class MatchesExample {
+    public static void main(String[] args) {
+        
+        String str1 = "hello123";
+        System.out.println(str1 + " matches pattern [a-z]+\\d+: " + str1.matches("[a-z]+\\d+"));
+
+        
+        String email = "example@example.com";
+        System.out.println(email + " is a valid email: " + email.matches("^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$"));
+
+     
+        String phoneNumber = "+1-800-123-4567";
+        System.out.println(phoneNumber + " is a valid phone number: " + phoneNumber.matches("\\+\\d{1,2}-\\d{3}-\\d{3}-\\d{4}"));
+
+    
+        String digits = "1234567890";
+        System.out.println(digits + " contains only digits: " + digits.matches("\\d+"));
+
+     
+        String date = "12/12/2025";
+        System.out.println(date + " is a valid date: " + date.matches("d{2}d{2}d{4}"));
+    }
+}
