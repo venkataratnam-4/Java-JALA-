@@ -1,0 +1,15 @@
+public class CommonValues {
+    public static void main(String[] args) {
+        int[] array1 = {10, 20, 30, 40, 50}; 
+        int[] array2 = {15, 20, 35, 40, 55}; 
+    System.out.print("Common values: ");
+        for (int num1 : array1) {
+            for (int num2 : array2) {
+                if (num1 == num2) {
+                    System.out.print(num1 + " ");
+                    break; 
+                }
+            }
+        }
+    }
+}
