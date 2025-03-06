@@ -1,0 +1,12 @@
+public class Example {
+    private int instanceVariable = 10; 
+
+    public static void staticMethod() {
+        
+        System.out.println("instance Variable");
+    }
+
+    public static void main(String[] args) {
+        staticMethod(); 
+    }
+}
