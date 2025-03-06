@@ -1,0 +1,13 @@
+public class IncrementDecrement {
+    public static void showIncrementDecrement() {
+        int num = 5; 
+        System.out.println("Original Value: " + num);
+        num++;
+        System.out.println("After Increment: " + num);
+        num--; 
+        System.out.println("After Decrement: " + num);
+    }
+public static void main(String[] args) {
+        showIncrementDecrement(); 
+    }
+}
