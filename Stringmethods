@@ -1,0 +1,16 @@
+public class StringMethodsExample {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        String str2 = "hello";
+        String text = "JavaProgramming";
+        String fileName = "document.pdf";
+        String a = "Apple";
+        String b = "Banana";
+ System.out.println("equalsIgnoreCase(): " + str1.equalsIgnoreCase(str2)); 
+ System.out.println("startsWith(): " + text.startsWith("Java")); 
+        System.out.println("endsWith(): " + fileName.endsWith(".pdf"));
+        System.out.println("compareTo() (Apple vs Banana): " + a.compareTo(b)); // -1
+        System.out.println("compareTo() (Banana vs Apple): " + b.compareTo(a)); // 1
+        System.out.println("compareTo() (Apple vs Apple): " + a.compareTo("Apple")); // 0
+    }
+}
