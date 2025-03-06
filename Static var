@@ -1,0 +1,34 @@
+public class Example {
+ 
+    static int staticVar = 10;
+
+ 
+    int instanceVar = 20;
+
+ 
+    static void staticMethod() {
+        System.out.println("Static method called");
+    }
+
+  
+    void instanceMethod() {
+        System.out.println("Instance method called");
+    }
+
+    public static void main(String[] args) {
+       
+        System.out.println("Static Variable: " + staticVar);
+
+        
+        staticMethod();
+
+  
+        Example obj = new Example();
+
+    
+        System.out.println("Instance Variable: " + obj.instanceVar);
+
+    
+        obj.instanceMethod();
+    }
+}
