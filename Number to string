@@ -1,0 +1,13 @@
+public class NumberToString {
+    public static void main(String[] args) {
+        int num1 = 100;
+        double num2 = 99.99;
+        float num3 = 45.6f;
+    String str1 = String.valueOf(num1);
+        String str2 = String.valueOf(num2);
+        String str3 = String.valueOf(num3);
+ System.out.println("Integer as String: " + str1);
+        System.out.println("Double as String: " + str2);
+        System.out.println("Float as String: " + str3);
+    }
+}
