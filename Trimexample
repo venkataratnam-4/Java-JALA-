@@ -1,0 +1,8 @@
+public class TrimExample {
+    public static void main(String[] args) {
+        String text = "   Hello Java!   "; 
+    String trimmedText = text.trim();
+  System.out.println("Before: [" + text + "]");
+        System.out.println("After: [" + trimmedText + "]");
+    }
+}
