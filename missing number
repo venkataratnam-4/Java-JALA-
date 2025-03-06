@@ -1,0 +1,22 @@
+public class MissingNumber {
+    public static int findMissingNumber(int[] arr) {
+        int totalSum = 100 * 101 / 2;
+        int sum = 0;
+   for (int num : arr) {
+            sum += num;
+        }
+  return totalSum - sum; 
+    }
+ public static void main(String[] args) {
+        int[] numbers = new int[99]; 
+        int missing = 45;
+        int index = 0;
+
+        for (int i = 1; i <= 100; i++) {
+            if (i != missing) {
+                numbers[index++] = i;
+            }
+        }
+ System.out.println("Missing number: " + findMissingNumber(numbers));
+    }
+}
