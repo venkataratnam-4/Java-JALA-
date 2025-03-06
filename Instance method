@@ -1,0 +1,21 @@
+public class MyClass {
+    
+    public void instanceMethod() {
+        System.out.println("Instance method called");
+    }
+
+
+    public static void staticMethod() {
+       
+        MyClass obj = new MyClass();
+
+        
+        obj.instanceMethod();
+    }
+
+    
+    public static void main(String[] args) {
+        
+        staticMethod();
+    }
+}
