@@ -1,0 +1,11 @@
+public class IntegerToString {
+    public static void main(String[] args) {
+        Integer number = 123; 
+        String str1 = number.toString();
+    String str2 = String.valueOf(number);
+ String str3 = number + "";
+System.out.println("Using toString(): " + str1);
+        System.out.println("Using valueOf(): " + str2);
+        System.out.println("Using concatenation: " + str3);
+    }
+}
