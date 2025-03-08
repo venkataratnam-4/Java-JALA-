@@ -1,0 +1,22 @@
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileWriterExample {
+    public static void main(String[] args) {
+     
+        String filePath = "output.txt";
+
+    
+        String textToWrite = "Hello, this text is written using FileWriter in Java!";
+
+    
+        try (FileWriter fileWriter = new FileWriter(filePath)) {
+          
+            fileWriter.write(textToWrite);
+
+            System.out.println("Text has been written to the file successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
