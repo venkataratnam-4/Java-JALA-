@@ -1,0 +1,19 @@
+// Interface with a default method
+interface MyInterface {
+    default void show() {  // Default method
+        System.out.println("Default Method: show()");
+    }
+}
+
+// Class implementing the interface without overriding the default method
+class MyClass implements MyInterface {
+    // No need to implement show(), it is inherited
+}
+
+// Main class to test
+public class DefaultMethodDemo {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        obj.show(); // Calling inherited default method
+    }
+}
