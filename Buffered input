@@ -1,0 +1,26 @@
+import java.io.BufferedOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class BufferedOutputStreamExample {
+    public static void main(String[] args) {
+    
+        String filePath = "output.txt";
+
+     
+        String textToWrite = "Hello, this text is written using BufferedOutputStream in Java!";
+
+   
+        try (BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream(filePath))) {
+         
+            byte[] bytes = textToWrite.getBytes();
+
+        
+            bufferedOutputStream.write(bytes);
+
+            System.out.println("Text has been written to the file successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
