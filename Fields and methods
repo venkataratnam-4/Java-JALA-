@@ -1,0 +1,18 @@
+// Default fields and methods (no access modifier means "default")
+class DefaultClass {
+    String name = "John";  // Default field
+    int age = 25;          // Default field
+
+    void display() {  // Default method
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+// Another class in the same package accessing default members
+public class DefaultAccessDemo {
+    public static void main(String[] args) {
+        DefaultClass obj = new DefaultClass(); // Accessing default class
+        System.out.println("Accessing default field: " + obj.name);
+        obj.display(); // Accessing default method
+    }
+}
