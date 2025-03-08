@@ -1,0 +1,14 @@
+class PublicClass {
+    public String name = "John";  
+    public void display() {       
+        System.out.println("Public Method: Name = " + name);
+    }
+}
+
+public class PublicAccessDemo {
+    public static void main(String[] args) {
+        PublicClass obj = new PublicClass();
+        System.out.println("Accessing Public Field: " + obj.name);
+        obj.display();
+    }
+}
