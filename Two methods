@@ -1,0 +1,53 @@
+
+interface MyInterface {
+    void method1();  // Must be implemented
+    void method2();  // Not implemented
+}
+
+// Abstract class implementing only one method
+abstract class MyClass implements MyInterface {
+    public void method1() {
+        System.out.println("Implemented Method: method1()");
+    }
+}
+
+// Subclass providing full implementation
+class SubClass extends MyClass {
+    public void method2() {
+        System.out.println("Implemented Method: method2()");
+    }
+}
+
+// Main class to test
+public class InterfaceDemo {
+    public static void main(String[] args) {
+        MyClass obj = new SubClass(); 
+        obj.method1(); // Calling the implemented method
+    }
+}// Interface with two methods
+interface MyInterface {
+    void method1();  // Must be implemented
+    void method2();  // Not implemented
+}
+
+// Abstract class implementing only one method
+abstract class MyClass implements MyInterface {
+    public void method1() {
+        System.out.println("Implemented Method: method1()");
+    }
+}
+
+// Subclass providing full implementation
+class SubClass extends MyClass {
+    public void method2() {
+        System.out.println("Implemented Method: method2()");
+    }
+}
+
+// Main class to test
+public class InterfaceDemo {
+    public static void main(String[] args) {
+        MyClass obj = new SubClass(); 
+        obj.method1(); // Calling the implemented method
+    }
+}
