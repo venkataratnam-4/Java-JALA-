@@ -1,0 +1,10 @@
+public class StringIndexOutOfBoundsDemo {
+    public static void main(String[] args) {
+        String str = "Hello";
+
+        // Trying to access an index that is out of bounds
+        char ch = str.charAt(10); // This will cause StringIndexOutOfBoundsException
+
+        System.out.println("Character at index 10: " + ch);
+    }
+}
