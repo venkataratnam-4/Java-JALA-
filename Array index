@@ -1,0 +1,8 @@
+public class ArrayIndexOutOfBoundsDemo {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5};
+
+        // Trying to access an index that doesn't exist
+        System.out.println(numbers[10]); // This will cause ArrayIndexOutOfBoundsException
+    }
+}
