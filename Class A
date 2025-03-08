@@ -1,0 +1,27 @@
+// Class A
+class A {
+    void methodA() { System.out.println("Method in A"); }
+}
+
+// Class B (Child of A)
+class B extends A {
+    void methodB() { System.out.println("Method in B"); }
+}
+
+// Class C (Child of B)
+class C extends B {
+    void methodC() { System.out.println("Method in C"); }
+}
+
+// Main class
+public class MainClass {
+    public static void main(String[] args) {
+        A objA = new A();
+        B objB = new B();
+        C objC = new C();
+
+        objA.methodA(); // Calling A's method
+        objB.methodA(); objB.methodB(); // Calling A & B's methods
+        objC.methodA(); objC.methodB(); objC.methodC(); // Calling A, B & C's methods
+    }
+}
