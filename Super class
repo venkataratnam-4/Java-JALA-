@@ -1,0 +1,31 @@
+// Superclass A
+class A {
+    void show() { System.out.println("Show method in A"); } // Overridden method
+    void methodA1() { System.out.println("Method A1"); }
+    void methodA2() { System.out.println("Method A2"); }
+}
+
+// Subclass B (Child of A)
+class B extends A {
+    void show() { System.out.println("Show method in B"); } // Overriding method
+    void methodB1() { System.out.println("Method B1"); }
+    void methodB2() { System.out.println("Method B2"); }
+}
+
+// Subclass C (Child of B)
+class C extends B {
+    void show() { System.out.println("Show method in C"); } // Overriding method
+    void methodC1() { System.out.println("Method C1"); }
+    void methodC2() { System.out.println("Method C2"); }
+}
+
+// Main class
+public class InheritanceDemo {
+    public static void main(String[] args) {
+        C obj = new C(); // Object of C
+        obj.methodA1(); obj.methodA2();
+        obj.methodB1(); obj.methodB2();
+        obj.methodC1(); obj.methodC2();
+        obj.show(); // Calls overridden method in C
+    }
+}
