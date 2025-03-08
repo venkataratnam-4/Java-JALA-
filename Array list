@@ -1,0 +1,61 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+        
+        ArrayList<String> list = new ArrayList<>();
+
+     
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Cherry");
+        list.add("Date");
+        list.add("Elderberry");
+        list.add("Fig");
+        list.add("Grape");
+        list.add("Honeydew");
+        list.add("Indian Fig");
+        list.add("Jackfruit");
+
+   
+        list.add("Kiwi");
+
+     
+        System.out.println("Iterating through the ArrayList using Iterator:");
+        Iterator<String> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
+       
+        list.add(3, "Dragonfruit");  
+
+       
+        list.remove("Elderberry");
+
+      
+        list.remove(2);  
+
+     
+        list.set(4, "Mango");  
+
+    
+        System.out.println("Element at index 2: " + list.get(2)); 
+
+     
+        String elementAtIndex = list.get(5);  // Get the element at index 5
+        System.out.println("Element at index 5: " + elementAtIndex);
+
+      
+        System.out.println("Size of the ArrayList: " + list.size());
+
+     
+        boolean containsElement = list.contains("Mango");
+        System.out.println("Is 'Mango' present in the ArrayList? " + containsElement);
+
+      
+        list.clear();
+        System.out.println("All elements removed. Size of the ArrayList: " + list.size());
+    }
+}
