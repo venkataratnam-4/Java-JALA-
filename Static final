@@ -1,0 +1,22 @@
+// Interface with static final variable
+interface MyInterface {
+    int VALUE = 100;  // public, static, final by default
+}
+
+// Implementing class
+class MyClass implements MyInterface {
+    void display() {
+        System.out.println("VALUE: " + VALUE);
+    }
+}
+
+// Main class
+public class InterfaceDemo {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        obj.display();
+        
+        // Accessing directly using interface name
+        System.out.println("Accessing directly: " + MyInterface.VALUE);
+    }
+}
