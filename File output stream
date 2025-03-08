@@ -1,0 +1,26 @@
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
+public class WriteToFileExample {
+    public static void main(String[] args) {
+     
+        String filePath = "output.txt";
+
+   
+        String textToWrite = "Hello, this is a text written using OutputStream in Java!";
+
+      
+        try (OutputStream outputStream = new FileOutputStream(filePath)) {
+           
+            byte[] bytes = textToWrite.getBytes();
+
+         
+            outputStream.write(bytes);
+
+            System.out.println("Text has been written to the file successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
