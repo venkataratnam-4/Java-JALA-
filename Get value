@@ -1,0 +1,16 @@
+public class MethodOverloadingExample {
+
+   
+    public static int getValue(int a) {
+        return a * 2;
+    }
+
+   
+    public static String getValue(int a) {
+        return "Value: " + a;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getValue(10));  
+    }
+}
