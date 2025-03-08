@@ -1,0 +1,21 @@
+// Interface with public fields (default behavior)
+interface MyInterface {
+    int PUBLIC_VALUE = 100;  // public, static, final by default
+    String NAME = "Interface Field";
+}
+
+// Implementing class
+class MyClass implements MyInterface {
+    void display() {
+        System.out.println("PUBLIC_VALUE: " + PUBLIC_VALUE);
+        System.out.println("NAME: " + NAME);
+    }
+}
+
+// Main class
+public class InterfaceFieldsDemo {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        obj.display();
+    }
+}
