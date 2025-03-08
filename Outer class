@@ -1,0 +1,40 @@
+class OuterClass {
+    // Private interface (accessible only inside OuterClass)
+    private interface PrivateInterface {
+        int VALUE = 100;
+        void display();
+    }
+
+    // Protected interface (accessible in the same package & subclasses)
+    protected interface ProtectedInterface {
+        int VALUE = 200;
+        void display();
+    }
+
+    // Class implementing PrivateInterface
+    static class PrivateImpl implements PrivateInterface {
+        public void display() {
+            System.out.println("Private Interface Method, VALUE: " + VALUE);
+        }
+    }
+
+    // Class implementing ProtectedInterface
+    static class ProtectedImpl implements ProtectedInterface {
+        public void display() {
+            System.out.println("Protected Interface Method, VALUE: " + VALUE);
+        }
+    }
+
+    // Method to access and print values
+    public static void accessInterfaces() {
+        new PrivateImpl().display();
+        new ProtectedImpl().display();
+    }
+}
+
+// Main class
+public class InterfaceDemo {
+    public static void main(String[] args) {
+        OuterClass.accessInterfaces();
+    }
+}
