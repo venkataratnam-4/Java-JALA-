@@ -1,0 +1,19 @@
+// Custom Exception Class
+class AgeException extends Exception {
+    public AgeException(String message) {
+        super(message);
+    }
+}
+
+// Main Class
+public class CustomExceptionDemo {
+    public static void main(String[] args) throws AgeException {
+        int age = 15;
+
+        if (age < 18) {
+            throw new AgeException("You must be 18 or older.");
+        }
+
+        System.out.println("Access granted.");
+    }
+}
