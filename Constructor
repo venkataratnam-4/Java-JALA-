@@ -1,0 +1,17 @@
+class MyClass {
+   
+    MyClass() {
+        this(10, "Hello from constructor");  
+        System.out.println("No-argument constructor");
+    }
+
+    
+    MyClass(int num, String text) {
+        System.out.println("Number: " + num);
+        System.out.println("Text: " + text);
+    }
+
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();  
+    }
+}
