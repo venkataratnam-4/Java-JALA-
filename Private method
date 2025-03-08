@@ -1,0 +1,27 @@
+class Parent {
+    private String name = "John";
+    private void display() {
+        System.out.println("Private Method: Name = " + name);
+    }
+
+    public void show() {
+        display(); // Calling private method inside the same class
+    }
+}
+
+class Child extends Parent {
+    public void tryAccess() {
+        // display(); // ERROR: Cannot access private method
+        System.out.println("Cannot access private members from subclass.");
+    }
+}
+
+public class PrivateAccessDemo {
+    public static void main(String[] args) {
+        Parent p = new Parent();
+        p.show(); // Accessing private method indirectly
+
+        Child c = new Child();
+        c.tryAccess(); // Trying to access private method (not possible)
+    }
+}
