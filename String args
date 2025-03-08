@@ -1,0 +1,20 @@
+public class MethodOverloadingExample {
+
+   
+    public static void display(int a) {
+        System.out.println("Integer value: " + a);
+    }
+
+   
+    public static void display(String a) {
+        System.out.println("String value: " + a);
+    }
+
+    public static void main(String[] args) {
+      
+        display(10);
+
+    
+        display("Hello, World!");
+    }
+}
