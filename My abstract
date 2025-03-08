@@ -1,0 +1,22 @@
+// Abstract class
+abstract class MyAbstractClass {
+    void nonAbstractMethod() { // Non-abstract method
+        System.out.println("This is a non-abstract method.");
+    }
+}
+
+// Subclass
+class MyClass extends MyAbstractClass {
+    void accessNonAbstract() {
+        MyAbstractClass obj = new MyClass(); // Creating object of abstract class using child class
+        obj.nonAbstractMethod(); // Accessing non-abstract method
+    }
+}
+
+// Main class
+public class AbstractDemo {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        obj.accessNonAbstract();
+    }
+}
