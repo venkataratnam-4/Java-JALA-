@@ -1,0 +1,12 @@
+public class ExceptionExample {
+    // Method that throws an exception
+    static void throwException() throws ArithmeticException {
+        throw new ArithmeticException("This is an Arithmetic Exception");
+    }
+
+    // Main method calling the method without try-catch
+    public static void main(String[] args) {
+        throwException(); // No try-catch, will terminate with an exception
+        System.out.println("This will not be printed.");
+    }
+}
