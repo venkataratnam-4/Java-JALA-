@@ -1,0 +1,6 @@
+public class ClassNotFoundExceptionDemo {
+    public static void main(String[] args) throws ClassNotFoundException {
+        // Trying to load a class that does not exist
+        Class.forName("com.nonexistent.ClassName"); // This will cause ClassNotFoundException
+    }
+}
