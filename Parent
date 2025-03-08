@@ -1,0 +1,18 @@
+class Parent {
+    
+    int num = 10;
+    String text = "Hello from Parent";
+}
+
+class Child extends Parent {
+    
+    void printParentFields() {
+        System.out.println("Number from Parent: " + super.num);  
+        System.out.println("Text from Parent: " + super.text);  
+    }
+
+    public static void main(String[] args) {
+        Child obj = new Child();  
+        obj.printParentFields();  
+    }
+}
