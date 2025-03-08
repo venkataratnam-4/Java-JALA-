@@ -1,0 +1,23 @@
+class A {
+    void show() { System.out.println("Show in A"); }
+}
+
+class B extends A {
+    void show() { System.out.println("Show in B"); }
+}
+
+class C extends B {
+    void show() { System.out.println("Show in C"); }
+}
+
+public class MainClass {
+    public static void main(String[] args) {
+        A ref; 
+
+        ref = new B(); // B object
+        ref.show(); // Calls B's method
+
+        ref = new C(); // C object
+        ref.show(); // Calls C's method
+    }
+}
