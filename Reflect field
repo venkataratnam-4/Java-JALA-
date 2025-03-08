@@ -1,0 +1,15 @@
+import java.lang.reflect.Field;
+
+class Sample {
+    public int existingField;
+}
+
+public class NoSuchFieldExceptionDemo {
+    public static void main(String[] args) throws NoSuchFieldException {
+        // Getting the Class object of Sample
+        Class<Sample> sampleClass = Sample.class;
+
+        // Trying to access a field that does not exist
+        Field field = sampleClass.getField("nonExistentField"); // This will cause NoSuchFieldException
+    }
+}
