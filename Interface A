@@ -1,0 +1,24 @@
+
+interface InterfaceA {
+    void show(); // Same method in both interfaces
+}
+
+// Second interface
+interface InterfaceB {
+    void show(); // Same method in both interfaces
+}
+
+// Class implementing both interfaces
+class MyClass implements InterfaceA, InterfaceB {
+    public void show() { 
+        System.out.println("Method show() implemented.");
+    }
+}
+
+// Main class to test
+public class MultipleInterfaceDemo {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        obj.show(); // Calling the method
+    }
+}
