@@ -1,0 +1,27 @@
+class MyClass {
+    
+    MyClass() {
+        System.out.println("Default constructor called");
+    }
+
+    
+    MyClass(int num) {
+        System.out.println("One-argument constructor called with value: " + num);
+    }
+
+ 
+    MyClass(int num, String text) {
+        System.out.println("Two-argument constructor called with values: " + num + " and " + text);
+    }
+
+    public static void main(String[] args) {
+        
+        MyClass obj1 = new MyClass();
+
+       
+        MyClass obj2 = new MyClass(10);
+
+        
+        MyClass obj3 = new MyClass(20, "Hello");
+    }
+}
