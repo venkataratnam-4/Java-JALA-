@@ -1,0 +1,33 @@
+class ProtectedClass {
+    protected String name = "John";
+    protected void display() { System.out.println("Protected: " + name); }
+}
+
+class SamePackageAccess {
+    void access() {
+        ProtectedClass obj = new ProtectedClass();
+        System.out.println("Same Package: " + obj.name);
+        obj.display();
+    }
+}
+
+class ChildClass extends ProtectedClass {
+    void access() {
+        System.out.println("Child Class: " + name);
+        display();
+    }
+}
+
+class NonSubclassAccess {
+    void access() {
+        System.out.println("Non-Subclass: Cannot Access Protected Members");
+    }
+}
+
+public class ProtectedAccessDemo {
+    public static void main(String[] args) {
+        new SamePackageAccess().access();
+        new ChildClass().access();
+        new NonSubclassAccess().access();
+    }
+}
