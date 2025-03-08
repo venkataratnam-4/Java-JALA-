@@ -1,0 +1,64 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+       
+        HashMap<Integer, String> studentMap = new HashMap<>();
+
+    
+        studentMap.put(101, "John Doe");
+        studentMap.put(102, "Jane Smith");
+        studentMap.put(103, "Samuel Lee");
+        studentMap.put(104, "Anna Brown");
+        studentMap.put(105, "Peter Johnson");
+        studentMap.put(106, "Lucy Davis");
+        studentMap.put(107, "David Clark");
+        studentMap.put(108, "Sophie White");
+        studentMap.put(109, "James Wilson");
+        studentMap.put(110, "Olivia Taylor");
+
+     
+        studentMap.put(111, "Ethan Harris");
+
+        
+        String studentName = studentMap.get(103); 
+        System.out.println("Student with ID 103: " + studentName);
+
+    
+        HashMap<Integer, String> clonedMap = (HashMap<Integer, String>) studentMap.clone();
+        System.out.println("Cloned Map: " + clonedMap);
+
+     
+        boolean hasKey = studentMap.containsKey(107);
+        System.out.println("Does ID 107 exist in the map? " + hasKey);
+
+  
+        boolean hasValue = studentMap.containsValue("James Wilson"); // Check if name exists
+        System.out.println("Is 'James Wilson' in the map? " + hasValue);
+
+  
+        boolean isEmpty = studentMap.isEmpty();
+        System.out.println("Is the map empty? " + isEmpty);
+
+   
+        System.out.println("Size of the map: " + studentMap.size());
+
+    
+        Set<Integer> keys = studentMap.keySet();
+        System.out.println("All Keys in the map: " + keys);
+
+   
+        System.out.println("All Values in the map: " + studentMap.values());
+
+      
+        studentMap.remove(110); 
+        System.out.println("Map after removing ID 110: " + studentMap);
+
+   
+        HashMap<Integer, String> anotherMap = new HashMap<>();
+        anotherMap.putAll(studentMap); 
+        System.out.println("Another Map (copied): " + anotherMap);
+    }
+}
