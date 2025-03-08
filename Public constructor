@@ -1,0 +1,33 @@
+class MyClass {
+
+  
+    public MyClass() {
+        System.out.println("Public constructor called");
+    }
+
+    private MyClass(int num) {
+        System.out.println("Private constructor called with value: " + num);
+    }
+
+    protected MyClass(String text) {
+        System.out.println("Protected constructor called with text: " + text);
+    }
+
+   
+    MyClass(double value) {
+        System.out.println("Default constructor called with value: " + value);
+    }
+
+ 
+    public void callPrivateConstructor() {
+        MyClass obj = new MyClass(100);  
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        
+        MyClass obj1 = new MyClass();  
+        obj1.callPrivateConstructor();  
+    }
+}
