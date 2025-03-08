@@ -1,0 +1,10 @@
+public class NullPointerExceptionDemo {
+    public static void main(String[] args) {
+        String str = null; // Null reference
+
+        // Trying to call a method on a null object
+        int length = str.length(); // This will cause NullPointerException
+
+        System.out.println("Length of the string: " + length);
+    }
+}
