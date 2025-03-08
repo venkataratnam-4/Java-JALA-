@@ -1,0 +1,16 @@
+class MyClass {
+    
+    int num = 10;
+    String text = "Hello, World!";
+    
+   
+    void printFields() {
+        System.out.println("Number: " + this.num);
+        System.out.println("Text: " + this.text);
+    }
+
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();  
+        obj.printFields();
+    }
+}
