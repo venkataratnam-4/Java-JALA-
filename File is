@@ -1,0 +1,36 @@
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+public class PropertiesFileReader {
+    public static void main(String[] args) {
+        
+        String filePath = "config.properties";
+        
+       
+        Properties properties = new Properties();
+
+        
+        try (FileInputStream fileInputStream = new FileInputStream(filePath)) {
+           
+            properties.load(fileInputStream);
+
+   
+            String dbUrl = properties.getProperty("database.url");
+            String dbUsername = properties.getProperty("database.username");
+            String dbPassword = properties.getProperty("database.password");
+            String serverHost = properties.getProperty("server.host");
+            String serverPort = properties.getProperty("server.port");
+
+           
+            System.out.println("Database URL: " + dbUrl);
+            System.out.println("Database Username: " + dbUsername);
+            System.out.println("Database Password: " + dbPassword);
+            System.out.println("Server Host: " + serverHost);
+            System.out.println("Server Port: " + serverPort);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
