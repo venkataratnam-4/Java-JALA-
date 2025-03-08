@@ -1,0 +1,24 @@
+// Parent interface
+interface ParentInterface {
+    void method1();
+}
+
+// Child interface extending ParentInterface
+interface ChildInterface extends ParentInterface {
+    void method2();
+}
+
+// Class implementing ChildInterface
+class MyClass implements ChildInterface {
+    public void method1() { System.out.println("Method1"); }
+    public void method2() { System.out.println("Method2"); }
+}
+
+// Main class to test
+public class InterfaceInheritanceDemo {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        obj.method1();
+        obj.method2();
+    }
+}
