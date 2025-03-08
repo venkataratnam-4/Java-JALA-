@@ -1,0 +1,23 @@
+class A {
+    int num = 10;
+}
+
+class B extends A {
+    int num = 20;
+}
+
+class C extends B {
+    int num = 30;
+}
+
+public class MainClass {
+    public static void main(String[] args) {
+        A ref; // Superclass reference
+
+        ref = new B(); // Reference to B object
+        System.out.println("Value of num: " + ref.num); // Accesses A's num
+
+        ref = new C(); // Reference to C object
+        System.out.println("Value of num: " + ref.num); // Accesses A's num
+    }
+}
