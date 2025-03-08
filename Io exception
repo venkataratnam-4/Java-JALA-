@@ -1,0 +1,11 @@
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class IOExceptionDemo {
+    public static void main(String[] args) throws IOException {
+        // Trying to write to a file in a restricted directory
+        FileWriter writer = new FileWriter("/restricted_folder/output.txt"); // This will cause IOException
+        writer.write("This will fail.");
+        writer.close();
+    }
+}
