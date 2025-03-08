@@ -1,0 +1,10 @@
+public class NumberFormatExceptionDemo {
+    public static void main(String[] args) {
+        String invalidNumber = "abc123"; // Not a valid number
+
+        // Trying to convert an invalid string to an integer
+        int num = Integer.parseInt(invalidNumber); // This will cause NumberFormatException
+
+        System.out.println("Converted number: " + num);
+    }
+}
