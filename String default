@@ -1,0 +1,51 @@
+class MyClass {
+    int num;
+    String text;
+
+   
+    MyClass() {
+        num = 0;
+        text = "Default Text";
+        System.out.println("Default constructor called");
+    }
+
+   
+    MyClass(int num) {
+        this.num = num;
+        text = "Initialized with number";
+        System.out.println("Constructor with int called");
+    }
+
+    
+    MyClass(String text) {
+        this.num = 0;
+        this.text = text;
+        System.out.println("Constructor with String called");
+    }
+
+  
+    void updateObject(int num, String text) {
+        this.num = num;
+        this.text = text;
+        System.out.println("Object updated using method");
+    }
+
+    
+    void display() {
+        System.out.println("num: " + num + ", text: " + text);
+    }
+
+    public static void main(String[] args) {
+        
+        MyClass obj = new MyClass();
+        obj.display();
+
+      
+        obj.updateObject(10, "Updated Text");
+        obj.display();
+
+    
+        MyClass obj2 = new MyClass("New String Constructor");
+        obj2.display();
+    }
+}
