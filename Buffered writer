@@ -1,0 +1,24 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class BufferedWriterExample {
+    public static void main(String[] args) {
+       
+        String filePath = "output.txt";
+
+       
+        String textToWrite = "Hello, this text is written using BufferedWriter in Java
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(filePath))) {
+         
+            bufferedWriter.write(textToWrite);
+            
+       
+            bufferedWriter.newLine();
+            
+            System.out.println("Text has been written to the file successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
