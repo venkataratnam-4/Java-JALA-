@@ -1,0 +1,33 @@
+class MyClass {
+    int num;
+    String text;
+
+
+    MyClass(int num) {
+        this.num = num;
+        System.out.println("Constructor called with int: " + num);
+    }
+
+ 
+    MyClass(String text) {
+        this.text = text;
+        System.out.println("Constructor called with String: " + text);
+    }
+
+    
+    public int getNumber() {
+        return num;
+    }
+
+    
+    public String getText() {
+        return text;
+    }
+
+    public static void main(String[] args) {
+        MyClass obj1 = new MyClass(100);
+        MyClass obj2 = new MyClass("Hello");
+        System.out.println("The number is: " + obj1.getNumber());
+        System.out.println("The text is: " + obj2.getText());
+    }
+}
