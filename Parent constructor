@@ -1,0 +1,21 @@
+class Parent{
+    
+    Parent(int num, String text) {
+        System.out.println("Parent Constructor:");
+        System.out.println("Number: " + num);
+        System.out.println("Text: " + text);
+    }
+}
+
+class Child extends Parent {
+    
+    Child(int num, String text) {
+     
+        super(num, text);
+        System.out.println("Child Constructor");
+    }
+
+    public static void main(String[] args) {
+        Child obj = new Child(10, "Hello from Child");
+    }
+}
