@@ -1,0 +1,19 @@
+
+interface MyInterface {
+    void show();
+}
+
+// Class implementing the interface
+class MyClass implements MyInterface {
+    public void show() {
+        System.out.println("Implemented Method: show()");
+    }
+}
+
+// Main class to test
+public class InterfaceDemo {
+    public static void main(String[] args) {
+        MyInterface obj = new MyClass(); // Using interface reference
+        obj.show(); // Calling implemented method
+    }
+}
